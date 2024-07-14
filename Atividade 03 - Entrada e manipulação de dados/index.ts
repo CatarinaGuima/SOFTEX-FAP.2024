@@ -29,9 +29,9 @@ console.log(string1 + string2 + " " + numero);
 // Solicite ao usuário seu nome e imprima uma mensagem de boas-vindas na tela.
 let nome = prompt("Olá! Por favor, digite o seu nome: ");
 if (nome == null || nome == "") {
-   nome = prompt("Olá! Por favor, digite o seu nome: ");
+  nome = prompt("Olá! Por favor, digite o seu nome: ");
 } else {
-    alert(`Seja Bem-Vindo(a) ${nome}!`);
+  alert(`Seja Bem-Vindo(a) ${nome}!`);
 }
 
 //Questão 06
@@ -55,7 +55,7 @@ console.log("A soma dos números é: " + soma);
 //Questão 09
 // Receba um número decimal do usuário e calcule o seu quadrado.
 const numeroDecimal = parseFloat(prompt("Digite um número para calcular: ")!);
-const quadro = numeroDecimal**2;
+const quadro = numeroDecimal ** 2;
 console.log(`O quadrado do número ${numeroDecimal} é : ` + quadro);
 
 //Questão 10
@@ -75,7 +75,9 @@ console.log(nomeCompleto);
 //Questão 12
 // Solicite ao usuário uma sequência de números separados por espaço e exiba quantos números
 // foram digitados.
-const numeros = prompt("Digite uma sequência de números separados por espaço: ");
+const numeros = prompt(
+  "Digite uma sequência de números separados por espaço: "
+);
 const qtdNumeros = numeros?.split(" ");
 const numDigitados = Number(qtdNumeros?.length);
 console.log("Quantidade de números digitados: " + numDigitados);
@@ -85,9 +87,9 @@ console.log("Quantidade de números digitados: " + numDigitados);
 // animal foi digitado.
 const animal = prompt("Digite o nome de um animal");
 if (animal !== null && animal !== "") {
-    console.log(`Você digitou: ${animal}`);
-} else  {
-    console.log("Tente novamente! Você não digitou um nome válido");
+  console.log(`Você digitou: ${animal}`);
+} else {
+  console.log("Tente novamente! Você não digitou um nome válido");
 }
 
 //Questão 14
@@ -106,19 +108,19 @@ console.log("Tamanho da frase: " + frase2?.length);
 ///Questão 16
 // Solicite ao usuário um número inteiro e exiba se ele é par ou ímpar.
 const numInteiro = parseInt(prompt("Digite um número inteiro: ")!);
-if (numInteiro % 2 === 0){
-    console.log("O número é par");
+if (numInteiro % 2 === 0) {
+  console.log("O número é par");
 } else {
-    console.log("O número é ímpar");
+  console.log("O número é ímpar");
 }
 
 //Questão 17
 // Receba um número inteiro digitado pelo usuário e verifique se ele é positivo ou negativo.
 const numeroInt = parseInt(prompt("Digite um número inteiro: ")!);
 if (numeroInt >= 0) {
- console.log(`O ${numeroInt} é positivo!`);
+  console.log(`O ${numeroInt} é positivo!`);
 } else {
-    console.log(`O ${numeroInt} é negativo!`);
+  console.log(`O ${numeroInt} é negativo!`);
 }
 
 //Questão 18
@@ -126,16 +128,16 @@ if (numeroInt >= 0) {
 const num1 = Number(prompt("Digite o primeiro número"));
 const num2 = Number(prompt("Digite o segundo número"));
 if (num1 > num2) {
-    console.log(`O maior número é: ${num1}`);
+  console.log(`O maior número é: ${num1}`);
 } else {
-    console.log(`O maior número é: ${num2}`);
+  console.log(`O maior número é: ${num2}`);
 }
 
 //Questão 19
 // Receba a altura e o peso de uma pessoa digitados pelo usuário. Em seguida, calcule o seu índice de massa corporal (IMC) utilizando a fórmula: IMC = peso / (altura * altura) e exiba o resultado.
 const altura = Number(prompt("Por favor, informe a altura: "));
 const peso = Number(prompt("Agora, informe o peso: "));
-const IMC = peso/altura**2;
+const IMC = peso / altura ** 2;
 console.log(`O IMC: ${IMC.toFixed(2)}`);
 
 //Questão 20
@@ -150,3 +152,75 @@ if (nomeTamanho !== null && nomeTamanho.length < 5) {
 }
 
 //Questão 21
+// Solicite ao usuário que insira o seu estado civil e exiba uma mensagem apropriada (por exemplo: "Você é casado(a)", "Você é solteiro(a)", etc.).
+const estadoCivil = prompt("Digite o seu estado civil: ");
+if (estadoCivil !== null && estadoCivil !== "") {
+  console.log(`Você é no momento presente ${estadoCivil}`);
+} else {
+  console.log("Você não digitou um estado civil válido :(");
+}
+
+//Questão 22
+// Receba a base e a altura de um retângulo digitados pelo usuário. Em seguida, calcule a sua área e exiba o resultado.
+const base = Number(prompt("Informe o valor da base do retângulo: "));
+const alturaRet = Number(prompt("Informe o valor da altura do retãngulo: "));
+const areaRetangulo = base * alturaRet;
+console.log(`A área do retângulo é: ${areaRetangulo.toFixed(2)}`);
+
+//Questão 23
+// Peça ao usuário que digite a sua cidade e verifique se ela começa com a letra "S" (ou outra letra de sua escolha).
+const cidade = prompt("Por favor, digite a sua cidade: ")?.toUpperCase();
+if (cidade?.charAt(0) === "S"){
+    console.log(`A sua cidade: ${cidade}, começa com a letra "S".`);
+} else {
+    console.log(`A sua cidade: ${cidade}, não começa com a letra "S".`);
+}
+
+//Questão 24
+// Solicite ao usuário que insira dois números decimais e calcule o resto da divisão entre eles.
+const num1Dec = parseFloat(prompt("Digite o primeiro número decimal: ")!);
+const num2Dec = parseFloat(prompt("Digite o segundo número decimal: ")!);
+const restoDivisao = num1Dec % num2Dec;
+console.log(`O resto da divisão entre ${num1Dec} e ${num2Dec} é: ${restoDivisao.toFixed(2)}`);
+
+//Questão 25
+// Solicite ao usuário um número decimal e converta-o em um número inteiro.
+const decimal = parseFloat(prompt("Escolha um número decimal: ")!);
+const inteiro = parseInt(decimal.toString());
+console.log(`O número decimal ${decimal} convertido para um número inteiro é: ${inteiro}`);
+
+//Questão 26
+// Receba uma string contendo um número inteiro e some 10 a esse número, convertendo-o novamente para uma string antes de exibi-lo.
+const numeroString = prompt("Digite um número inteiro: ");
+const numeInteiro = parseInt(numeroString!);
+const numeroIncrementado = numeInteiro + 10;
+const numeroStringIncrementado = numeroIncrementado.toString();
+console.log(`O número incrementado é: ${numeroStringIncrementado}`);
+
+//Questão 27
+// Solicite ao usuário que digite uma data no formato "dd/mm/aaaa" e extraia o dia, o mês e o ano separadamente, convertendo-os em números inteiros.
+const data = prompt("Digite uma data dd/mm/aaaa: ");
+const diaMesAno = data?.split("/");
+const diaInt = parseInt(diaMesAno![0]);
+const mesInt = parseInt(diaMesAno![1]);
+const anoInt = parseInt(diaMesAno![2]);
+console.log(`Dia: ${diaInt}, Mês: ${mesInt}, Ano: ${anoInt}`);
+
+//Questão 28
+// Receba o nome de uma cidade do usuário e concatene-o com o nome do estado para formar uma mensagem completa, como "Você mora em [cidade], [estado].".
+const city = prompt("Digite o nome da cidade: ");
+const estado = prompt("Digite o nome do estado: ");
+const cidadeEstado = `Você mora em ${city}, ${estado}.`;
+console.log(cidadeEstado);
+
+//Questão 29
+// Solicite ao usuário que insira seu ano de nascimento e concatene-o com uma mensagem de boas-vindas, como "Bem-vindo ao nosso programa, nascido em [ano de nascimento]!".
+const anoNascimento = prompt("Diga o seu ano de nascimento: ");
+console.log(`Bem-vindo(a) ao nosso programa, nascido(a) em ${anoNascimento}!.`);
+
+//Questão 30
+// Receba um número inteiro e uma string do usuário. Em seguida, concatene-os em uma única string, separando-os com um espaço.
+const numeroIn = parseInt(prompt("Entre um número inteiro: ")!);
+const stringFrase =  prompt("Entre um string: ");
+const concatenacao = numeroIn + " " + stringFrase;
+console.log(concatenacao);
