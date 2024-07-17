@@ -13,9 +13,14 @@ else {
 //Questão 02
 // Crie um programa que receba a idade de uma pessoa e exiba se ela é maior de idade ou menor de idade.
 var idade = Number(prompt("Idade: "));
-if (idade < 18) {
+if (idade < 0 && idade > 150) {
+    console.log("Digite um idade válida");
+}
+else if (idade < 18) {
     console.log("A pessoa é menor de idade");
 }
 else {
     console.log("A pessoa é maior de idade");
 }
+//Questão 03
+// Desenvolva um programa que leia dois números inteiros e mostre qual deles é o maior, ou se são iguais.
