@@ -24,3 +24,11 @@ else {
 }
 //Questão 03
 // Desenvolva um programa que leia dois números inteiros e mostre qual deles é o maior, ou se são iguais.
+var num1 = parseInt(prompt("Entre o 1º número inteiro: "));
+var num2 = parseInt(prompt("Entre o 2º número inteiro: "));
+if (num1 === num2) {
+    console.log("Os números são iguais");
+}
+else if (num1 > num2) {
+    console.log("\"O ".concat(num1, " \u00E9 maior que ").concat(num2));
+}

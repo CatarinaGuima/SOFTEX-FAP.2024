@@ -13,13 +13,19 @@ if (numInteiro < 0) {
 // Crie um programa que receba a idade de uma pessoa e exiba se ela é maior de idade ou menor de idade.
 const idade = Number(prompt("Idade: "));
 if (idade < 0 && idade > 150) {
-    console.log("Digite um idade válida");
+  console.log("Digite um idade válida");
 } else if (idade < 18) {
-    console.log("A pessoa é menor de idade");
+  console.log("A pessoa é menor de idade");
 } else {
-    console.log("A pessoa é maior de idade");
+  console.log("A pessoa é maior de idade");
 }
 
 //Questão 03
 // Desenvolva um programa que leia dois números inteiros e mostre qual deles é o maior, ou se são iguais.
-
+const num1 = parseInt(prompt("Entre o 1º número inteiro: ")!);
+const num2 = parseInt(prompt("Entre o 2º número inteiro: ")!);
+if (num1 === num2) {
+  console.log("Os números são iguais");
+} else if (num1 > num2) {
+    console.log(`"O ${num1} é maior que ${num2}`);
+}
