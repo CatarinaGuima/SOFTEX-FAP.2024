@@ -1,4 +1,4 @@
-# Curso FAP FrontEnd
+# SOFTEX/FAP - FrontEnd
 
 Este repositório contém o material do curso de FrontEnd da FAP (Formação Acelerada em Programação). O curso abrange uma formação acelerada em programação FrontEnd, com foco nos seguintes tópicos:
 
@@ -9,6 +9,6 @@ Este repositório contém o material do curso de FrontEnd da FAP (Formação Ace
 - **Web Services - Cliente**
 - **Noções de UX (Experiência do Usuário)**
 
-## Autor
+## Autora
 
 Este material de estudos é desenvolvido e mantido por Catarina Guimarães.
