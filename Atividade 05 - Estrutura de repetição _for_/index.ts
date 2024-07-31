@@ -133,3 +133,89 @@ for (let i = 0; i < 10; i++) {
 }
 console.log(`O menor valor digitado: ${numMenor}`);
 console.log(`O maior valor digitado: ${numMaior}`);
+
+// Questão 19
+// Faça um programa que exiba os números ímpares de 1 a 100.
+console.log("Os números ímpares de 1 a 100 são: ");
+for (let i = 1 ; i <= 100 ; i++) {
+    if (i % 2 == 1) {
+        console.log(i);
+    }
+}
+
+// Questão 20
+// Crie um programa que leia 5 notas de alunos e exiba quantos deles foram aprovados (nota maior ou igual a 7).
+let aprovado = 0;
+for (let i = 0; i < 5; i++) {
+    let notas = parseFloat(prompt("Digite a " + (i + 1) + "ª nota:")!);
+    if (notas >= 7) {
+        aprovado++;
+    }
+}
+console.log(`A quantidade de aprovados são: ${aprovado}`);
+
+// Questão 21
+// Faça um programa que exiba a soma dos dígitos de um número inteiro fornecido pelo usuário.
+const numInteiro = parseInt(prompt("Digite um número inteiro: ")!);
+let somaDigitos = 0;
+const numString = numInteiro.toString();
+for (let i = 0; i < numString.length; i++) {
+  //cada dígito do número inteiro
+  somaDigitos += Number(numString[i]);
+}
+console.log(`A soma dos dígitos do número inteiro informado é ${somaDigitos}`);
+
+// Questão 22
+// Elabore um programa que leia um número inteiro e exiba todos os seus divisores.
+const numInt = parseInt(prompt("Digite um número inteiro: ")!);
+console.log("Divisores do número " + numInt + ":");
+for (let i = 1; i <= numInt; i++) {
+    if (numInt % i === 0) {
+        console.log(i);
+    }
+}
+
+// Questão 23
+// Desenvolva um programa que calcule a média de altura de 5 pessoas.
+let somaAlturas = 0;
+for (let i = 1 ; i <= 5 ; i++) {
+    const altura = parseFloat(prompt(`Informe a ${i}ª altura: `)!);
+    somaAlturas += altura;
+}
+const mediaAlturas = somaAlturas / 5;
+console.log(`A média das alturas é ${mediaAlturas.toFixed(2)} cm.`);
+
+// Questão 24
+// Faça um programa que exiba os números de 1 a 100, substituindo os múltiplos de 3 pela palavra "Fizz" e os múltiplos de 5 pela palavra "Buzz". Para os números que são múltiplos de ambos, utilize a palavra "FizzBuzz".
+for (let i = 1; i <= 100; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log("FizzBuzz");
+  } else if (i % 3 === 0) {
+    console.log("Fizz");
+  } else if (i % 5 === 0) {
+    console.log("Buzz");
+  } else {
+    console.log(i);
+  }
+}
+
+// Questão 25
+// Elabore um programa que leia um número inteiro e exiba a soma dos dígitos pares desse número.
+const numeroInteiro = parseInt(prompt("Digite um número inteiro: ")!);
+let somaDigitosPares = 0;
+const numeroString = numeroInteiro.toString();
+for (let i = 0; i < numeroString.length; i++) {
+  const digito = Number(numeroString[i]);
+  if (digito % 2 === 0) {
+    somaDigitosPares += digito;
+  } 
+}
+console.log(`A soma dos dígitos pares do número inteiro informado é ${somaDigitosPares}`);
+
+// Questão 26
+// Faça um programa que leia um número inteiro e exiba o número invertido. Por exemplo, se o número lido for 123, o programa deve exibir 321.
+const numeroInt = parseInt(prompt("Escolha um número inteiro: ")!);
+const numeroStr = numeroInt.toString();
+const numInversoStr = numeroStr.split('').reverse().join('');
+const numInverso = parseInt(numInversoStr);
+console.log(`O número invertido é: ${numInverso}`);
