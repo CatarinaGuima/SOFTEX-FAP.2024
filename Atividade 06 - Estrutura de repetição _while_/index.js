@@ -64,3 +64,20 @@
 //     i++;
 //     console.log(`9 x ${i - 1} = ${resultado}`);
 // }
+//DESAFIO
+//Crie um programa que receba n notas de alunos até o número -1 seja teclado.
+//*Calcule a média das notas 
+//**Mostre a menor nota
+//*Mostre quantas notas foram inseridas
+//*Calcule a média das notas
+//*Mostre quantos foram aprovados e quantos não foram aprovados (aprovado >= 7)
+var i = 0;
+var nota = 0;
+var soma = 0;
+do {
+    nota = parseFloat(prompt("Digite a ".concat(i + 1, "\u00BA nota: ")));
+    soma += nota;
+    i++;
+} while (nota === -1);
+var mediaNotas = soma / i;
+console.log(mediaNotas);
