@@ -64,20 +64,45 @@
 //     i++;
 //     console.log(`9 x ${i - 1} = ${resultado}`);
 // }
-//DESAFIO
-//Crie um programa que receba n notas de alunos até o número -1 seja teclado.
-//*Calcule a média das notas 
-//**Mostre a menor nota
-//*Mostre quantas notas foram inseridas
-//*Calcule a média das notas
-//*Mostre quantos foram aprovados e quantos não foram aprovados (aprovado >= 7)
-var i = 0;
-var nota = 0;
-var soma = 0;
-do {
-    nota = parseFloat(prompt("Digite a ".concat(i + 1, "\u00BA nota: ")));
-    soma += nota;
-    i++;
-} while (nota === -1);
-var mediaNotas = soma / i;
-console.log(mediaNotas);
+// //DESAFIO
+// //Crie um programa que receba n notas de alunos até o número -1 seja teclado.
+// //Mostre a maior nota
+// //Mostre a menor nota
+// //Mostre quantas notas foram inseridas
+// //Calcule a média das notas
+// //Mostre quantos foram aprovados e quantos não foram aprovados (aprovado >= 7)
+// let qtdNotas = 0;
+// let i = 0;
+// let soma = 0;
+// let nota = 0;
+// let menorNota = 11;
+// let maiorNota = -1;
+// let aprovados = 0;
+// let reprovados = 0;
+// while (nota !== -1) {
+//   nota = parseFloat(prompt(`Digite a ${i + 1}º nota: `)!);
+//   soma += nota;
+//   qtdNotas++;
+//   i++;
+//   if (nota >= 0 && nota <= 10) {
+//     if (nota < menorNota) {
+//       menorNota = nota;
+//     }
+//     if (nota > maiorNota) {
+//       maiorNota = nota;
+//     }
+//     if (nota >= 7) {
+//       aprovados++;
+//     } else {
+//       reprovados++;
+//     }
+//   }
+// }
+// let mediaNotas = (soma + 1) / (qtdNotas - 1);
+// console.log(`A maior nota inserida foi ${maiorNota}`);
+// console.log(`A menor nota inserida foi ${menorNota}`);
+// console.log(`A quantidade de notas que foram inseridas foi ${qtdNotas - 1}`);
+// console.log(`A média das notas é ${mediaNotas}`);
+// console.log(`Foram aprovados ${aprovados} alunos`);
+// console.log(`Foram reprovados ${reprovados} alunos`);
+//Questão 11
