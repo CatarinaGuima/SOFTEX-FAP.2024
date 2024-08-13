@@ -220,5 +220,76 @@ while (numInt !== 0) {
 }
 console.log(`Números divisíveis por 2: ${divisiveis2}\nNúmeros divisíveis por 3: ${divisiveis3}\nNúmeros divisíveis por 5: ${divisiveis5}`);
 
-// Questão 20 
-// Desenvolva um programa que leia uma sequência de números inteiros do usuário e exiba a média dos números divisíveis por 3. O programa deve parar de ler quando o usuário digitar o número 0 utilizando o while.
+// // Questão 20
+// // Desenvolva um programa que leia uma sequência de números inteiros do usuário e exiba a média dos números divisíveis por 3. O programa deve parar de ler quando o usuário digitar o número 0 utilizando o while.
+let numberInt;
+let sum = 0;
+let qtd = 0;
+while (numberInt !== 0) {
+  numberInt = parseInt(prompt("Digite um número inteiro (digite 0 para sair):")!);
+  if (numberInt % 3 === 0 && numberInt !== 0) {
+    sum += numberInt;
+    qtd++;
+  }
+}
+let media = sum / qtd;
+console.log(`A média dos números divisíveis dividos por 3 é: ${media}`);
+
+//Questão 21
+// Faça um programa que leia uma sequência de números inteiros do usuário e exiba quantos números possuem mais de três dígitos. O programa deve parar de ler quando o usuário digitar o número 0 utilizando o while.
+let numerInt;
+let count = 0;
+while (numerInt !== 0) {
+  numerInt = parseInt(prompt("Informe um número inteiro (digite 0 para sair):")!);
+  if (String(numerInt).length >= 3) {
+    count++;
+  }
+}
+console.log(`Quantidade de números com mais de três dígitos: ${count}`);
+
+//Questão 22
+// Desenvolva um programa que leia uma sequência de números inteiros do usuário e exiba a média dos números que estão entre 50 e 100. O programa deve parar de ler quando o usuário digitar o número 0 utilizando o while.
+let numerosInteiro;
+let somaNumeros = 0;
+let qtdNum = 0;
+while (numerosInteiro !== 0) {
+  numerosInteiro = parseInt(
+    prompt("Informe um número inteiro entre 50 e 100 (digite 0 para sair):")!
+  );
+  if (numerosInteiro >= 50 && numerosInteiro <= 100 && numerosInteiro !== 0) {
+    somaNumeros += numerosInteiro;
+    console.log("Número adicionado com sucesso.");
+    qtdNum++;
+  }
+}
+let mediaNum = somaNumeros / qtdNum;
+console.log(`A média dos números: ${mediaNum}`);
+
+// // Questão 23
+// Elabore um programa que leia uma sequência de números inteiros do usuário e exiba o menor valor digitado que seja positivo e ímpar. O programa deve parar de ler quando o usuário digitar o número 0 utilizando o while.
+let nInt;
+let menorValor = Infinity;
+while (nInt !== 0) {
+  nInt = parseInt(prompt("Informe um número inteiro (digite 0 para sair):")!);
+  if (nInt > 0 && nInt % 2 !== 0 && nInt !== 0) {
+    if (nInt < menorValor && nInt !== 0) {
+      menorValor = nInt;
+    }
+  }
+}
+console.log(`O menor número positivo ímpar digitado foi: ${menorValor}`);
+
+//Questão 24
+// Faça um programa que leia uma sequência de números inteiros do usuário e exiba quantos números são pares e quantos números são ímpares entre o primeiro e o último número digitado. O programa deve parar de ler quando o usuário digitar o número 0 utilizando o while.
+let nuIn;
+let par = 0;
+let imp = 0;
+while (nuIn !== 0) {
+  nuIn = parseInt(prompt("Digite um número inteiro: ")!);
+  if (nuIn % 2 == 0 && nuIn !== 0) {
+    par++;
+  } else if (nuIn !== 0) {
+    imp++;
+  }
+}
+console.log(`Números pares digitados: ${par}\nNúmeros ímpares digitados: ${imp}`);

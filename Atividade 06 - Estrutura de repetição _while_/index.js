@@ -95,8 +95,8 @@ while (numInteiro !== 0) {
     numeros.push(numInteiro);
     if (numeros.length > 1) {
         var maiorValor = Math.max.apply(Math, numeros);
-        var menorValor = Math.min.apply(Math, numeros);
-        console.log("O maior n\u00FAmero \u00E9 ".concat(maiorValor, " e o menor n\u00FAmero \u00E9 ").concat(menorValor));
+        var menorValor_1 = Math.min.apply(Math, numeros);
+        console.log("O maior n\u00FAmero \u00E9 ".concat(maiorValor, " e o menor n\u00FAmero \u00E9 ").concat(menorValor_1));
     }
 }
 //Questão 12
@@ -108,8 +108,8 @@ while (numerosInt !== -1) {
     numerosInt = parseInt(prompt("Informe uma sequência de números inteiros (digite -1 para sair):"));
     somar += numerosInt;
     contador++;
-    var media = somar / contador;
-    console.log("A m\u00E9dia dos n\u00FAmeros digitados \u00E9 ".concat(media.toFixed(2)));
+    var media_1 = somar / contador;
+    console.log("A m\u00E9dia dos n\u00FAmeros digitados \u00E9 ".concat(media_1.toFixed(2)));
 }
 //Questão 13
 // Faça um programa que leia um número inteiro e exiba a soma dos seus dígitos elevados ao cubo utilizando o while.
@@ -202,5 +202,71 @@ while (numInt !== 0) {
     }
 }
 console.log("N\u00FAmeros divis\u00EDveis por 2: ".concat(divisiveis2, "\nN\u00FAmeros divis\u00EDveis por 3: ").concat(divisiveis3, "\nN\u00FAmeros divis\u00EDveis por 5: ").concat(divisiveis5));
-// Questão 20 
-// Desenvolva um programa que leia uma sequência de números inteiros do usuário e exiba a média dos números divisíveis por 3. O programa deve parar de ler quando o usuário digitar o número 0 utilizando o while.
+// // Questão 20
+// // Desenvolva um programa que leia uma sequência de números inteiros do usuário e exiba a média dos números divisíveis por 3. O programa deve parar de ler quando o usuário digitar o número 0 utilizando o while.
+var numberInt;
+var sum = 0;
+var qtd = 0;
+while (numberInt !== 0) {
+    numberInt = parseInt(prompt("Digite um número inteiro (digite 0 para sair):"));
+    if (numberInt % 3 === 0 && numberInt !== 0) {
+        sum += numberInt;
+        qtd++;
+    }
+}
+var media = sum / qtd;
+console.log("A m\u00E9dia dos n\u00FAmeros divis\u00EDveis dividos por 3 \u00E9: ".concat(media));
+//Questão 21
+// Faça um programa que leia uma sequência de números inteiros do usuário e exiba quantos números possuem mais de três dígitos. O programa deve parar de ler quando o usuário digitar o número 0 utilizando o while.
+var numerInt;
+var count = 0;
+while (numerInt !== 0) {
+    numerInt = parseInt(prompt("Informe um número inteiro (digite 0 para sair):"));
+    if (String(numerInt).length >= 3) {
+        count++;
+    }
+}
+console.log("Quantidade de n\u00FAmeros com mais de tr\u00EAs d\u00EDgitos: ".concat(count));
+//Questão 22
+// Desenvolva um programa que leia uma sequência de números inteiros do usuário e exiba a média dos números que estão entre 50 e 100. O programa deve parar de ler quando o usuário digitar o número 0 utilizando o while.
+var numerosInteiro;
+var somaNumeros = 0;
+var qtdNum = 0;
+while (numerosInteiro !== 0) {
+    numerosInteiro = parseInt(prompt("Informe um número inteiro entre 50 e 100 (digite 0 para sair):"));
+    if (numerosInteiro >= 50 && numerosInteiro <= 100 && numerosInteiro !== 0) {
+        somaNumeros += numerosInteiro;
+        console.log("Número adicionado com sucesso.");
+        qtdNum++;
+    }
+}
+var mediaNum = somaNumeros / qtdNum;
+console.log("A m\u00E9dia dos n\u00FAmeros: ".concat(mediaNum));
+// // Questão 23
+// Elabore um programa que leia uma sequência de números inteiros do usuário e exiba o menor valor digitado que seja positivo e ímpar. O programa deve parar de ler quando o usuário digitar o número 0 utilizando o while.
+var nInt;
+var menorValor = Infinity;
+while (nInt !== 0) {
+    nInt = parseInt(prompt("Informe um número inteiro (digite 0 para sair):"));
+    if (nInt > 0 && nInt % 2 !== 0 && nInt !== 0) {
+        if (nInt < menorValor && nInt !== 0) {
+            menorValor = nInt;
+        }
+    }
+}
+console.log("O menor n\u00FAmero positivo \u00EDmpar digitado foi: ".concat(menorValor));
+//Questão 24
+// Faça um programa que leia uma sequência de números inteiros do usuário e exiba quantos números são pares e quantos números são ímpares entre o primeiro e o último número digitado. O programa deve parar de ler quando o usuário digitar o número 0 utilizando o while.
+var nuIn;
+var par = 0;
+var imp = 0;
+while (nuIn !== 0) {
+    nuIn = parseInt(prompt("Digite um número inteiro: "));
+    if (nuIn % 2 == 0 && nuIn !== 0) {
+        par++;
+    }
+    else if (nuIn !== 0) {
+        imp++;
+    }
+}
+console.log("N\u00FAmeros pares digitados: ".concat(par, "\nN\u00FAmeros \u00EDmpares digitados: ").concat(imp));
