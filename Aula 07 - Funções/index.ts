@@ -1,3 +1,5 @@
+import { somar } from "./functions"; 
+
 // //Questão 01
 // // Implemente o código do slide de número 6.
 // console.log("Estudar é muito bom");
@@ -48,3 +50,8 @@
 
 // //Questão 05
 // Escreva uma função chamada "soma" que receba dois parâmetros (a e b) e retorne a soma deles.
+const a = Number(prompt("Escolha um valor para [A]: "));
+const b = Number(prompt("Escolha um valor para [B]: "));
+const resultado = somar(a,b);
+console.log(`${a} + ${b} = ${resultado}`);
+

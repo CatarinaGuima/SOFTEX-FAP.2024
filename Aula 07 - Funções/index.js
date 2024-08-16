@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var functions_1 = require("./functions");
 // //Questão 01
 // // Implemente o código do slide de número 6.
 // console.log("Estudar é muito bom");
@@ -40,3 +43,7 @@
 // console.log(somar(50,50));
 // //Questão 05
 // Escreva uma função chamada "soma" que receba dois parâmetros (a e b) e retorne a soma deles.
+var a = Number(prompt("Escolha um valor para [A]: "));
+var b = Number(prompt("Escolha um valor para [B]: "));
+var resultado = (0, functions_1.somar)(a, b);
+console.log("".concat(a, " + ").concat(b, " = ").concat(resultado));
