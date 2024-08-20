@@ -1,4 +1,5 @@
 // import { somarAB } from "./functions";
+var _a, _b, _c, _d;
 //Questão 01
 // Implemente o código do slide de número 6.
 console.log("Estudar é muito bom");
@@ -83,7 +84,7 @@ console.log("A m\u00E9dia das tr\u00EAs notas \u00E9: ".concat(media(somaNotas).
 var peso = Number(prompt("Informe o seu peso: "));
 var altura = parseFloat(prompt("Informe a sua altura: "));
 function imc(peso, altura) {
-    var imc = peso / (Math.pow(altura, 2));
+    var imc = peso / Math.pow(altura, 2);
     return imc;
 }
 console.log("IMC: ".concat(imc(peso, altura).toFixed(2)));
@@ -109,7 +110,7 @@ console.log("Pre\u00E7o final com desconto: R$ ".concat(precoComDesconto));
 var salarioBruto = parseFloat(prompt("Informe o seu salário bruto: "));
 function calcularImpostoRenda(salarioBruto) {
     if (salarioBruto <= 1903.98) {
-        return 0.00;
+        return 0.0;
     }
     else if (salarioBruto <= 2826.65) {
         return (salarioBruto * 0.075).toFixed(2);
@@ -249,7 +250,7 @@ var custo;
 var margemLucro;
 var frete;
 function calcularPrecoProduto(custo, margemLucro, frete) {
-    var precoVenda = custo + (custo * margemLucro / 100) + frete;
+    var precoVenda = custo + (custo * margemLucro) / 100 + frete;
     return precoVenda;
 }
 custo = parseFloat(prompt("Informe o valor de custo do produto: "));
@@ -321,5 +322,90 @@ function tamanhoMaior5(arrayStrings) {
 tamanhoMaior5(arrayStrings);
 console.log("Palavras que t\u00EAm mais de 5 caracteres: \n");
 console.log(arrayStrings);
-//Questão 22
-// Crie uma função que recebe um array de objetos com informações sobre livros (título, autor, ano,etc.) e retorne um novo array apenas com os livros escritos por determinado autor.
+var livros = [];
+var continuar = "S";
+function informacoesLivros() {
+    var autorConsulta = prompt("Informe o nome do autor(a) que deseja consultar: ");
+    var livrosDoAutor = livros.filter(function (livro) { return livro.autor === autorConsulta; });
+    if (livrosDoAutor.length > 0) {
+        console.log("Livros do(a) autor(a) ".concat(autorConsulta, " encontrados:"));
+        livrosDoAutor.forEach(function (livro) {
+            console.log("T\u00EDtulo: ".concat(livro.titulo, ", Ano: ").concat(livro.ano));
+        });
+    }
+    else {
+        console.log("Nenhum livro encontrado para o autor informado.");
+    }
+}
+while (continuar === "S") {
+    var titulo = prompt("Informe o título do livro: ");
+    if (titulo !== null) {
+        var autor = prompt("Informe o nome do autor(a): ");
+        var ano = parseInt(prompt("Informe o ano de publicação: "));
+        var novoLivro = { titulo: titulo, autor: autor, ano: ano };
+        livros.push(novoLivro);
+    }
+    console.log("Livro adicionado com sucesso!");
+    continuar = prompt("Deseja adicionar outro livro? (S/N): ").toUpperCase();
+}
+informacoesLivros();
+var cont = "S";
+var pessoas = [];
+function nomePessoaMaisVelha(pessoas) {
+    var maisVelhaPessoa = pessoas[0];
+    for (var _i = 0, pessoas_1 = pessoas; _i < pessoas_1.length; _i++) {
+        var pessoa = pessoas_1[_i];
+        if (pessoa.idade > maisVelhaPessoa.idade) {
+            maisVelhaPessoa = pessoa;
+        }
+    }
+    return maisVelhaPessoa.nome;
+}
+while (cont === "S") {
+    var nome = prompt("Informe o nome da pessoa: ");
+    if (nome) {
+        var idade = parseInt(prompt("Informe a idade da pessoa: "));
+        var novaPessoa = { nome: nome, idade: idade };
+        pessoas.push(novaPessoa);
+    }
+    console.log("Pessoa adicionada com sucesso!");
+    cont = (_b = (_a = prompt("Deseja adicionar outra pessoa? [S/N]: ")) === null || _a === void 0 ? void 0 : _a.toUpperCase()) !== null && _b !== void 0 ? _b : "N";
+}
+var nomeMaisVelha = nomePessoaMaisVelha(pessoas);
+console.log("A pessoa mais velha \u00E9: ".concat(nomeMaisVelha));
+var seguir = "S";
+var carros = [];
+function InformacoesCarros(carros) {
+    var carrosFabricadosDepoisDoAno = carros.filter(function (carro) { return carro.ano > 2020; });
+    if (carrosFabricadosDepoisDoAno.length > 0) {
+        console.log("Carros fabricados ap\u00F3s o ano de 2020: ");
+        carrosFabricadosDepoisDoAno.forEach(function (carro) {
+            console.log("Marca: ".concat(carro.marca, ", Modelo: ").concat(carro.modelo, ", Carro: ").concat(carro.cor, " ,Ano: ").concat(carro.ano));
+        });
+    }
+    else {
+        console.log("Nenhum carro foi fabricado após o ano informado.");
+    }
+}
+while (seguir === "S") {
+    var marca = prompt("Informe a marca do carro: ");
+    var modelo = prompt("Informe a modelo do carro: ");
+    var cor = prompt("Informe a cor do carro: ");
+    var ano = parseInt(prompt("Informe o ano do carro: "));
+    if (marca && modelo && cor) {
+        var novoCarro = { marca: marca, modelo: modelo, cor: cor, ano: ano };
+        carros.push(novoCarro);
+    }
+    console.log("Carro adicionado com sucesso!");
+    seguir = (_d = (_c = prompt("Deseja adicionar outro carro? [S/N]: ")) === null || _c === void 0 ? void 0 : _c.toUpperCase()) !== null && _d !== void 0 ? _d : "N";
+}
+InformacoesCarros(carros);
+//Questão 25
+// Crie uma função chamada "inverterString" que recebe uma string como argumento e retorna a string invertida. Por exemplo, para a entrada "hello", a função deve retornar "olleh".
+function inverterString() {
+    var _a;
+    var str = (_a = prompt("Escolha uma palavra para inverter: ")) !== null && _a !== void 0 ? _a : "";
+    var stringInvertida = str.split("").reverse().join("");
+    return "".concat(str, " invertida = ").concat(stringInvertida);
+}
+console.log(inverterString());

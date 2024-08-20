@@ -17,9 +17,9 @@ console.log("Revisão é a mãe do aprendizado");
 //Questão 02
 // Implemente o código do slide de número 15.
 function criarFrases() {
-    console.log("Estudar é muito bom");
-    console.log("Paciência e persistência");
-    console.log("Revisão é a mãe do aprendizado");
+  console.log("Estudar é muito bom");
+  console.log("Paciência e persistência");
+  console.log("Revisão é a mãe do aprendizado");
 }
 criarFrases();
 criarFrases();
@@ -27,9 +27,9 @@ criarFrases();
 
 //Questão 03
 // Implemente o código do slide de número 24.
-function soma(num1: number,num2: number) {
-console.log(num1 + num2);
- }
+function soma(num1: number, num2: number) {
+  console.log(num1 + num2);
+}
 soma(10, 15);
 soma(10, 20);
 soma(30, 50);
@@ -37,36 +37,36 @@ soma(50, 50);
 
 //Questão 04
 // Implemente o código do slide de número 33.
-function somar(numb1: number, numb2: number):number {
-    return numb1 + numb2;
+function somar(numb1: number, numb2: number): number {
+  return numb1 + numb2;
 }
-const teste1 = somar(10,5);
+const teste1 = somar(10, 5);
 console.log(teste1);
 
-const teste2 = somar(10,20) + somar(30,50);
+const teste2 = somar(10, 20) + somar(30, 50);
 console.log(teste2);
 
-console.log(somar(50,50));
+console.log(somar(50, 50));
 
 //Questão 05
 // Escreva uma função chamada "soma" que receba dois parâmetros (a e b) e retorne a soma deles.
 const a = Number(prompt("Escolha um valor para [A]: "));
 const b = Number(prompt("Escolha um valor para [B]: "));
 function somarAB(a: number, b: number) {
-    const soma = a + b;
-    return soma;
-  }
-const resultado = somarAB(a,b);
+  const soma = a + b;
+  return soma;
+}
+const resultado = somarAB(a, b);
 console.log(`${a} + ${b} = ${resultado}`);
 
 //Questão 06
 // Crie uma função chamada "isPar" que receba um número inteiro como parâmetro e retorne "true" se o número for par ou "false" caso contrário.
 const nInteiro = parseInt(prompt("Digite um número inteiro: ")!);
 function isPar(nInteiro: number) {
-    if (nInteiro % 2 === 0) {
-        return true;
-    }
-    return false;
+  if (nInteiro % 2 === 0) {
+    return true;
+  }
+  return false;
 }
 console.log(isPar(nInteiro));
 
@@ -91,21 +91,21 @@ console.log(`A média das três notas é: ${media(somaNotas).toFixed(2)}`);
 
 // //Questão 08
 // Elabore uma função chamada "imc" que receba o peso (em kg) e a altura (em metros) de uma pessoa e retorne o índice de massa corporal (IMC) dela.
-const peso = Number(prompt("Informe o seu peso: "))
+const peso = Number(prompt("Informe o seu peso: "));
 const altura = parseFloat(prompt("Informe a sua altura: ")!);
 function imc(peso: number, altura: number) {
-    const imc = peso / (altura ** 2);
-    return imc;
+  const imc = peso / altura ** 2;
+  return imc;
 }
-console.log(`IMC: ${imc(peso,altura).toFixed(2)}`);
+console.log(`IMC: ${imc(peso, altura).toFixed(2)}`);
 
 //Questão 09
 // Elabore uma função chamada "calcularDesconto" que receba o valor de um produto e o percentual de desconto como parâmetros e retorne o valor com o desconto aplicado.
 const preco = Number(prompt("Informe o preço do produto: "));
 const percentual = parseInt(prompt("Informe o percentual(%) de desconto: ")!);
-function calcularDesconto (preco: number, percentual: number): number {
-    const valorDesconto =  preco*(percentual/100);
-    return valorDesconto;
+function calcularDesconto(preco: number, percentual: number): number {
+  const valorDesconto = preco * (percentual / 100);
+  return valorDesconto;
 }
 const valorDoDesconto = calcularDesconto(preco, percentual);
 const precoComDesconto = preco - valorDoDesconto;
@@ -121,19 +121,21 @@ console.log(`Preço final com desconto: R$ ${precoComDesconto}`);
 // e. Acima de R$ 4.664,68: alíquota de 27,5%
 const salarioBruto = parseFloat(prompt("Informe o seu salário bruto: ")!);
 function calcularImpostoRenda(salarioBruto: number) {
-    if (salarioBruto <= 1903.98) {
-        return 0.00;
-    } else if (salarioBruto <= 2826.65) {
-        return (salarioBruto*0.075).toFixed(2);
-    } else if (salarioBruto <= 3751.05) {
-        return (salarioBruto*0.15).toFixed(2);
-    } else if (salarioBruto <= 4664.68) {
-        return (salarioBruto* 0.225).toFixed(2);
-    } else if (salarioBruto > 4664.68) {
-        return (salarioBruto*0.275).toFixed(2);
-    }
+  if (salarioBruto <= 1903.98) {
+    return 0.0;
+  } else if (salarioBruto <= 2826.65) {
+    return (salarioBruto * 0.075).toFixed(2);
+  } else if (salarioBruto <= 3751.05) {
+    return (salarioBruto * 0.15).toFixed(2);
+  } else if (salarioBruto <= 4664.68) {
+    return (salarioBruto * 0.225).toFixed(2);
+  } else if (salarioBruto > 4664.68) {
+    return (salarioBruto * 0.275).toFixed(2);
+  }
 }
-console.log(`Valor do imposto de renda a ser pago: ${calcularImpostoRenda(salarioBruto)}`);
+console.log(
+  `Valor do imposto de renda a ser pago: ${calcularImpostoRenda(salarioBruto)}`
+);
 
 // Questão 11
 // Faça uma função chamada "calcularMediaArredondada" que receba uma lista de números como parâmetro e retorne a média aritmética desses números, arredondada para o inteiro mais próximo.
@@ -165,7 +167,7 @@ let digitosPares = 0;
 let digitosImpares = 0;
 const num = parseInt(prompt("Informe um número inteiro: ")!);
 function contarDigitosParesImpares(num: number) {
-  const digitos = num.toString().split("").map(Number);  // Obtém os dígitos como números
+  const digitos = num.toString().split("").map(Number); // Obtém os dígitos como números
   digitos.forEach((digito) => {
     if (digito % 2 === 0) {
       digitosPares++;
@@ -204,12 +206,14 @@ function calcularMediaAlunos(listaAlunos: Aluno[]): number {
   const mediaNotas = somaNotas / listaAlunos.length;
   return mediaNotas;
 }
-console.log(`Média das notas dos alunos: ${calcularMediaAlunos(listaAlunos).toFixed(2)}`);
+console.log(
+  `Média das notas dos alunos: ${calcularMediaAlunos(listaAlunos).toFixed(2)}`
+);
 
 //Questão 14
 // Crie uma função chamada "calcularIdade" que receba o ano de "nascimento" de uma pessoa como parâmetro e retorne a idade atual.
 const anoNasc = parseInt(prompt("Informe o ano de nascimento: ")!);
-function calcularIdade(anoNasc: number){
+function calcularIdade(anoNasc: number) {
   const idadeAtual = 2024 - anoNasc;
   return idadeAtual;
 }
@@ -294,14 +298,24 @@ let custo: number;
 let margemLucro: number;
 let frete: number;
 
-function calcularPrecoProduto(custo: number, margemLucro: number, frete: number): number {
-  const precoVenda = custo + (custo * margemLucro / 100) + frete;
+function calcularPrecoProduto(
+  custo: number,
+  margemLucro: number,
+  frete: number
+): number {
+  const precoVenda = custo + (custo * margemLucro) / 100 + frete;
   return precoVenda;
 }
 custo = parseFloat(prompt("Informe o valor de custo do produto: ")!);
 margemLucro = parseInt(prompt("Informe a margem de lucro (em percentual): ")!);
 frete = parseFloat(prompt("Informe o valor do frete: ")!);
-console.log(`Preço da venda do produto R$: ${calcularPrecoProduto(custo, margemLucro, frete).toFixed(2)}`);
+console.log(
+  `Preço da venda do produto R$: ${calcularPrecoProduto(
+    custo,
+    margemLucro,
+    frete
+  ).toFixed(2)}`
+);
 
 // Questão 19
 // Escreva uma função que aceite uma string como parâmetro e encontre a palavra mais longa dentro da string. String de exemplo: 'Tutorial de desenvolvimento da web'. Resultado esperado:'Desenvolvimento'.
@@ -365,8 +379,117 @@ function tamanhoMaior5(arrayStrings: string[]): string[] {
   return arrayStrings;
 }
 tamanhoMaior5(arrayStrings);
-console.log(`Palavras que têm mais de 5 caracteres: \n` );
+console.log(`Palavras que têm mais de 5 caracteres: \n`);
 console.log(arrayStrings);
 
 //Questão 22
 // Crie uma função que recebe um array de objetos com informações sobre livros (título, autor, ano,etc.) e retorne um novo array apenas com os livros escritos por determinado autor.
+type Livro = {
+    titulo: string;
+    autor: string;
+    ano: number;
+  };
+  const livros: Livro[] = [];
+  let continuar = "S";
+  function informacoesLivros() {
+    const autorConsulta = prompt("Informe o nome do autor(a) que deseja consultar: ");
+    const livrosDoAutor = livros.filter((livro) => livro.autor === autorConsulta);
+    if (livrosDoAutor.length > 0) {
+      console.log(`Livros do(a) autor(a) ${autorConsulta} encontrados:`);
+      livrosDoAutor.forEach((livro) => {
+        console.log(`Título: ${livro.titulo}, Ano: ${livro.ano}`);
+      });
+    } else {
+      console.log("Nenhum livro encontrado para o autor informado.");
+    }
+  }
+  while (continuar === "S") {
+    const titulo = prompt("Informe o título do livro: ");
+    if (titulo !== null ) {
+      const autor = prompt("Informe o nome do autor(a): ")!;
+      const ano = parseInt(prompt("Informe o ano de publicação: ")!);
+      const novoLivro: Livro = { titulo, autor, ano };
+      livros.push(novoLivro);
+    }
+    console.log("Livro adicionado com sucesso!");
+    continuar = prompt("Deseja adicionar outro livro? (S/N): ")!.toUpperCase();
+  }
+  informacoesLivros();
+
+//Questão 23
+// Crie uma função que recebe um array de objetos representando pessoas (com nome, idade, etc.) e retorne o nome da pessoa mais velha.
+type Pessoal = {
+  nome: string;
+  idade: number;
+};
+let cont: string = "S";
+const pessoas: Pessoal[] = [];
+function nomePessoaMaisVelha(pessoas: Pessoal[]): string {
+    let maisVelhaPessoa: Pessoal = pessoas[0];
+    for (const pessoa of pessoas) {
+      if (pessoa.idade > maisVelhaPessoa.idade) {
+        maisVelhaPessoa = pessoa;
+      }
+    }
+    return maisVelhaPessoa.nome;
+}
+while (cont === "S") {
+  let nome = prompt("Informe o nome da pessoa: ");
+  if (nome) {
+    let idade = parseInt(prompt("Informe a idade da pessoa: ")!);
+    const novaPessoa: Pessoal = { nome, idade };
+    pessoas.push(novaPessoa);
+  }
+  console.log("Pessoa adicionada com sucesso!");
+  cont = prompt("Deseja adicionar outra pessoa? [S/N]: ")?.toUpperCase() ?? "N";
+}
+const nomeMaisVelha = nomePessoaMaisVelha(pessoas);
+console.log(`A pessoa mais velha é: ${nomeMaisVelha}`);
+
+//Questão 24
+// Escreva uma função que recebe um array de objetos com informações sobre carros (com marca, modelo, ano, etc.) e retorne um novo array apenas com os carros fabricados após um certo ano específico.
+type Carro = {
+  marca: string;
+  modelo: string;
+  cor: string;
+  ano: number;
+};
+
+let seguir: string = "S";
+const carros: Carro[] = [];
+function InformacoesCarros(carros: Carro[]) {
+    const carrosFabricadosDepoisDoAno = carros.filter(
+      (carro) => carro.ano > 2020
+    );
+    if (carrosFabricadosDepoisDoAno.length > 0) {
+      console.log(`Carros fabricados após o ano de 2020: `);
+      carrosFabricadosDepoisDoAno.forEach((carro) => {
+        console.log(`Marca: ${carro.marca}, Modelo: ${carro.modelo}, Carro: ${carro.cor} ,Ano: ${carro.ano}`);
+      });
+    } else {
+      console.log("Nenhum carro foi fabricado após o ano informado.");
+    }
+}
+while (seguir === "S") {
+      let marca = prompt("Informe a marca do carro: ");
+      let modelo = prompt("Informe a modelo do carro: ");
+      let cor = prompt("Informe a cor do carro: ");
+      let ano = parseInt(prompt("Informe o ano do carro: ")!);
+      if (marca && modelo && cor) {
+        const novoCarro: Carro = { marca, modelo, cor, ano };
+        carros.push(novoCarro);
+      }
+      console.log("Carro adicionado com sucesso!");
+      seguir = prompt("Deseja adicionar outro carro? [S/N]: ")?.toUpperCase() ?? "N";
+    }
+InformacoesCarros(carros);
+
+//Questão 25
+// Crie uma função chamada "inverterString" que recebe uma string como argumento e retorna a string invertida. Por exemplo, para a entrada "hello", a função deve retornar "olleh".
+function inverterString(): string {
+    const str = prompt("Escolha uma palavra para inverter: ") ?? "";
+    const stringInvertida = str.split("").reverse().join("");
+    return `${str} invertida = ${stringInvertida}`;
+}
+
+console.log(inverterString());
