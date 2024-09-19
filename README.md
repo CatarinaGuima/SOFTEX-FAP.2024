@@ -8,4 +8,4 @@
 
 ## Autora
 
-Este material de estudos é desenvolvido e mantido por Catarina Guimarães.
+Este material de estudos é desenvolvido e mantido com ❤️ por [Catarina Guimarães](https://github.com/catarinaguima) 
